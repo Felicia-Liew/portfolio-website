@@ -156,7 +156,6 @@ header {
   padding: 0 0;
   position: fixed;
   width: 100%;
-  border-bottom: 5px solid #ba3f39;
 }
 
 nav {
@@ -222,10 +221,10 @@ main {
   line-height: 1.2em;
 }
 
-.my-profile {
-  max-width: 400px;
+#container .me h2{
+  margin: 0 15px;
   text-align: center;
-  margin: 0 auto;
+  padding: 30px 0px 20px 0px;
 }
 
 .skills-section {
