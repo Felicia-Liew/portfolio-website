@@ -258,6 +258,25 @@ main {
   border-bottom: 1px solid #000000;
 }
 
+.file-link {
+  color: #2a3340;
+  text-decoration: underline;
+}
+
+.file-link a:visited {
+  color: #2a3340;
+}
+
+.file-link a:hover, a:focus {
+  color: #ba3f39;
+  text-decoration: underline;
+}
+
+.file-link a:active {
+  color: #ba3f39;
+  text-decoration: underline;
+}
+
 /*-----------------------------footer--------------------------------*/
 #contact h2, #contact p {
   text-align: center;
