@@ -41,11 +41,31 @@ img {
   color: #eee6d2;
   background-color: #ba3f39;
   padding: 0 0.5em 0 0.4em;
+  display: inline-block;
+  animation-duration: 5s;
+  animation-name: statement-color-change;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
+@keyframes statement-color-change {
+  0% {
+    background-color: #ba3f39;
+  }
+
+  50% {
+    background-color: #131f27;
+  }
+
+  100% {
+    background-color: #ba3f39;
+  }
 }
 
 header {
   background-color: #FFFFFF;
-  padding: 10px 5px 15px 5px;
+  padding: 10px 5px 0px 5px;
   margin: 0px;
   text-align: center;
 }
@@ -76,14 +96,17 @@ a:active {
   text-decoration: none;
   font-weight: 400;
   padding: 0.5em 1em 0.5em 1em;
-  transition: 0.2s opacity;
   border-radius: 10px;
+  margin: 0px 0px 20px 0px;
+  transition-duration: 0.2s;
+  transition-property: opacity;
 }
 
 .button:hover {
   text-decoration: none;
   color: #eee6d2;
   background-color: #ba3f39;
+  opacity: 0.8;
 }
 
 .button:active {
@@ -110,6 +133,13 @@ a:active {
   border: 2px solid #ba3f39;
 }
 
+.my-profile img {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .resume {
   background-color: transparent;
   color: #2a3340;
@@ -117,6 +147,7 @@ a:active {
   border-radius: 10px;
   padding: 0.5em 1em 0.5em 1em;
   font-weight: 400;
+  transition: 0.2s opacity;
 }
 
 .resume:hover {
@@ -124,6 +155,7 @@ a:active {
   color: #eee6d2;
   border: 2px solid #ba3f39;
   text-decoration: none;
+  opacity: 0.8;
 }
 
 .resume:active {
@@ -148,12 +180,12 @@ a:active {
 }
 
 .logo {
-  max-width: 150px;
+  max-width: 90px;
 }
 
 header {
   text-align: center;
-  padding: 0 0;
+  padding: 0px 0px;
   position: fixed;
   width: 100%;
 }
@@ -161,41 +193,50 @@ header {
 nav {
   width: 100%;
   padding-top: 20px;
+  font-weight: 400;
 }
 
-nav>ul {
+nav ul {
   list-style-type: none;
   padding: 0;
 }
 
-nav>ul>li {
+nav ul li {
   display: inline-block;
+  padding: 0px 20px 0px 20px;
 }
 
-nav>ul>li>a {
+nav ul li a {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+nav ul li a::before {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #2a3340;
+  opacity: 0;
+}
+
+nav ul li a:visited {
   padding: 0 15px;
   text-transform: uppercase;
   font-weight: 700;
   color: #2a3340;
 }
 
-nav>ul>li>a:visited {
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #2a3340;
-}
-
-nav>ul>li>a:hover {
+nav ul li a:hover {
   padding: 0 15px;
   text-transform: uppercase;
   font-weight: 700;
   color: #ba3f39;
   text-decoration: none;
   border-bottom: 1px solid #ba3f39;
+  transform: scale(1);
+  opacity: 1;
 }
 
-nav>ul>li>a:active {
+nav ul li a:active {
   padding: 0 15px;
   text-transform: uppercase;
   font-weight: 700;
@@ -204,13 +245,13 @@ nav>ul>li>a:active {
 
 #hero {
   background-color: #eee6d2;
-  padding: 150px 0;
+  padding: 30px 0;
   display: inline-block;
   width: 100%;
 }
 
 main {
-  padding-top: 235px;
+  padding-top: 180px;
   width: 100%;
 }
 
@@ -229,7 +270,6 @@ main {
 
 .skills-section {
   margin: 50px 0 0px 0;
-  border-bottom: 1px solid #000000;
 }
 
 .intro-row h1 {
@@ -244,8 +284,7 @@ main {
 }
 
 #project-section-1 {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #000000;
+  padding-bottom: 50px;
 }
 
 #project-section-3 {
@@ -276,8 +315,155 @@ main {
   text-decoration: underline;
 }
 
+/*---------------------- singapore skyline svg graphic-------------------------------------*/
+.cls-1 {
+  fill: #ba3f39;
+}
+
+.cls-2 {
+  fill: #4f575b;
+}
+
+.cls-3, .cls-4 {
+  fill: #498c7f;
+}
+
+.cls-12, .cls-3 {
+  stroke: #fff;
+}
+
+.cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-3, .cls-6 {
+  stroke-miterlimit: 10;
+}
+
+.cls-5, .cls-6 {
+  fill: #fff;
+}
+
+.cls-6 {
+  stroke: #2a3340;
+}
+
+.cls-7 {
+  fill: #2a3340;
+}
+
+.cls-8 {
+  opacity: 0.74;
+}
+
+.cls-9 {
+  fill: #919ea6;
+}
+
+.cls-10,
+.cls-11,
+.cls-12 {
+  fill: #212625;
+}
+
+.cls-10 {
+  stroke: #f7f9f9;
+}
+
+.cls-11 {
+  stroke: #f9f9f9;
+}
+
+.cls-13,
+.cls-14 {
+  fill: none;
+  stroke: #000;
+  stroke-linecap: round;
+}
+
+.cls-13 {
+  stroke-width: 1.15px;
+}
+
+.cls-14 {
+  stroke-width: 0.65px;
+}
+
+#skyline .flyer_wheel {
+  width: 50%;
+  animation-duration: 5s;
+  animation-name: wheel-move;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes wheel-move {
+  from {
+    transform: rotate(0deg);
+    transform-origin: center center;
+    width: 0%;
+  }
+
+  to {
+    transform: rotate(360deg);
+    transform-origin: -20px 50px;
+    width: 100%;
+  }
+}
+
+.bird1 {
+  animation-duration: 2s;
+  animation-name: bird1-move;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
+@keyframes bird1-move {
+  0% {
+    transform: translate(-10, -20px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translate(50px, 40px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(110px, 70px);
+    opacity: 0;
+  }
+}
+
+#skyline .supertree .cls-4 {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes color-change {
+  25% {
+    fill: #e28d99;
+  }
+
+  50% {
+    fill: #eee6d2;
+  }
+
+  100% {
+    fill: #498c7f;
+  }
+}
+
 /*-----------------------------footer--------------------------------*/
-#contact h2, #contact p {
+#contact h2 {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #000000;
+
+}
+
+#contact p {
   text-align: center;
 }
 
@@ -300,3 +486,165 @@ main {
 .copyright-notice {
   font-size: 0.8em;
 }
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+
+  main {
+    padding-top: 140px;
+    width: 100%;
+  }
+
+  .my-profile img {
+    width: 50%;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 10px;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  #about-page h3 {
+    margin-top: 0;
+  }
+
+  .skills-section h2, h3 {
+    text-align: center;
+  }
+
+  .skills-section li {
+    text-align: center;
+    padding-right: 40px;
+    list-style-type: none;
+  }
+
+  #work h2 {
+    display: block;
+    text-align: center;
+  }
+
+  #work h3 {
+    text-align: left;
+  }
+
+  .resume {
+    display: block;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+  body {
+    background-color: #FFFFFF;
+    font-family: 'Heebo', sans-serif;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #2a3340;
+  }
+
+  nav {
+    font-weight: 500;
+  }
+
+  .col-md-8 {
+    width: 66.66%;
+  }
+
+  .col-md-4 {
+    width: 33.33%;
+  }
+
+  .my-profile img {
+    width: 50%;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .logo {
+    max-width: 110px;
+  }
+
+  #work h2 {
+    display: block;
+    text-align: center;
+  }
+
+  #work h3 {
+    text-align: left;
+  }
+
+  h3 {
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .resume {
+    display: block;
+    width: 30%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #hero {
+    padding: 200px 0;
+  }
+
+  .process-row h2 {
+    font-size: 2em;
+  }
+
+  .me h2 {
+    font-size: 2em;
+  }
+
+  .container h2 {
+    font-size: 2em;
+  }
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {}
