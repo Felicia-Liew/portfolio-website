@@ -1,5 +1,9 @@
+/*-------------------------------- GENERIC -------------------------------------*/
 * {
   box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
 }
 
 body {
@@ -36,40 +40,6 @@ img {
   width: 100%;
 }
 
-.statement-role {
-  font-weight: 300;
-  color: #eee6d2;
-  background-color: #ba3f39;
-  padding: 0 0.5em 0 0.4em;
-  display: inline-block;
-  animation-duration: 5s;
-  animation-name: statement-color-change;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-timing-function: linear;
-}
-
-@keyframes statement-color-change {
-  0% {
-    background-color: #ba3f39;
-  }
-
-  50% {
-    background-color: #131f27;
-  }
-
-  100% {
-    background-color: #ba3f39;
-  }
-}
-
-header {
-  background-color: #FFFFFF;
-  padding: 10px 5px 0px 5px;
-  margin: 0px;
-  text-align: center;
-}
-
 a {
   color: #2a3340;
   text-decoration: none;
@@ -88,23 +58,84 @@ a:active {
   color: #ba3f39;
   text-decoration: underline;
 }
+.container {
+  padding: 0 15px;
+}
+main {
+  padding-top: 165px;
+  width: 100%;
+}
+
+/*-------------------------------- HEADER -------------------------------------*/
+.logo {
+  max-width: 90px;
+}
+
+header {
+  background-color: #FFFFFF;
+  padding: 10px 5px 0px 5px;
+  margin: 0px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+}
+nav {
+  width: 100%;
+  padding-top: 0px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 0px 15px 0px 15px;
+}
+
+nav ul li a {
+  color: #2a3340;
+}
+
+nav ul li a:visited {
+  font-weight: 700;
+  color: #2a3340;
+  border-bottom: 1px solid #ba3f39;
+}
+
+nav ul li a:hover {
+  font-weight: 700;
+  color: #ba3f39;
+  border-bottom: 1px solid #ba3f39;
+}
+
+nav ul li a:active {
+  font-weight: 700;
+  color: #ba3f39;
+  border-bottom: 1px solid #ba3f39;
+}
+
+/*-------------------------------- LINKS & BUTTONS -------------------------------------*/
 
 .button {
   display: inline-block;
-  color: #ffffff;
   background-color: #eee6d2;
   text-decoration: none;
   font-weight: 400;
   padding: 0.5em 1em 0.5em 1em;
   border-radius: 10px;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 30px 0px;
   transition-duration: 0.2s;
   transition-property: opacity;
-}
+  font-size: 1.2em;
+  }
 
 .button:hover {
   text-decoration: none;
-  color: #eee6d2;
+  color: #fff;
   background-color: #ba3f39;
   opacity: 0.8;
 }
@@ -112,7 +143,7 @@ a:active {
 .button:active {
   text-decoration: none;
   color: #eee6d2;
-  background-color: #6d0c0f;
+  background-color: #ba3f39;
 }
 
 .button.contact {
@@ -132,14 +163,24 @@ a:active {
   color: #eee6d2;
   border: 2px solid #ba3f39;
 }
-
-.my-profile img {
-  text-align: center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.file-link {
+  color: #2a3340;
+  text-decoration: underline;
 }
 
+.file-link a:visited {
+  color: #2a3340;
+}
+
+.file-link a:hover, a:focus {
+  color: #ba3f39;
+  text-decoration: underline;
+}
+
+.file-link a:active {
+  color: #ba3f39;
+  text-decoration: underline;
+}
 .resume {
   background-color: transparent;
   color: #2a3340;
@@ -164,158 +205,34 @@ a:active {
   border: 2px solid #6d0c0f;
   text-decoration: none;
 }
-
-.container {
-  padding: 0 15px;
-}
-
-#work .project-row {
-  margin: 25px 0;
-  border-bottom: 1px solid #000000;
-  padding-bottom: 25px;
-}
-
-#hero h1 {
-  text-align: center;
-}
-
-.logo {
-  max-width: 90px;
-}
-
-header {
-  text-align: center;
-  padding: 0px 0px;
-  position: fixed;
-  width: 100%;
-}
-
-nav {
-  width: 100%;
-  padding-top: 20px;
-  font-weight: 400;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-nav ul li {
+/*------------------------------------- ANIMATIONS -------------------------------------*/
+.statement-role {
+  font-weight: 300;
+  color: #eee6d2;
+  background-color: #ba3f39;
+  padding: 1em 0.5em;
   display: inline-block;
-  padding: 0px 20px 0px 20px;
+  animation-duration: 5s;
+  animation-name: statement-color-change;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  margin: 11px 0px;
 }
 
-nav ul li a {
-  color: rgba(0, 0, 0, 0.8);
-}
+@keyframes statement-color-change {
+  0% {
+    background-color: #ba3f39;
+  }
 
-nav ul li a::before {
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #2a3340;
-  opacity: 0;
-}
+  50% {
+    background-color: #131f27;
+  }
 
-nav ul li a:visited {
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #2a3340;
+  100% {
+    background-color: #ba3f39;
+  }
 }
-
-nav ul li a:hover {
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #ba3f39;
-  text-decoration: none;
-  border-bottom: 1px solid #ba3f39;
-  transform: scale(1);
-  opacity: 1;
-}
-
-nav ul li a:active {
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #ba3f39;
-}
-
-#hero {
-  background-color: #eee6d2;
-  padding: 30px 0;
-  display: inline-block;
-  width: 100%;
-}
-
-main {
-  padding-top: 180px;
-  width: 100%;
-}
-
-#hero p {
-  text-align: center;
-  font-weight: 400;
-  font-size: 1.5em;
-  line-height: 1.2em;
-}
-
-#container .me h2 {
-  margin: 0 15px;
-  text-align: center;
-  padding: 30px 0px 20px 0px;
-}
-
-.skills-section {
-  margin: 50px 0 0px 0;
-}
-
-.intro-row h1 {
-  text-align: center;
-}
-
-.subheader {
-  font-size: 1.2em;
-  font-weight: 500;
-  display: block;
-  margin-top: 50px;
-}
-
-#project-section-1 {
-  padding-bottom: 50px;
-}
-
-#project-section-3 {
-  padding: 0 15px;
-}
-
-#project-section-4 {
-  padding: 0 15px;
-  border-bottom: 1px solid #000000;
-}
-
-.file-link {
-  color: #2a3340;
-  text-decoration: underline;
-}
-
-.file-link a:visited {
-  color: #2a3340;
-}
-
-.file-link a:hover, a:focus {
-  color: #ba3f39;
-  text-decoration: underline;
-}
-
-.file-link a:active {
-  color: #ba3f39;
-  text-decoration: underline;
-}
-
-/*---------------------- singapore skyline svg graphic-------------------------------------*/
 .cls-1 {
   fill: #ba3f39;
 }
@@ -390,21 +307,18 @@ main {
   animation-duration: 5s;
   animation-name: wheel-move;
   animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-timing-function: ease-in-out;
+  animation-direction:normal;
+  animation-timing-function: linear;
+  transform-origin: 28.5% 34.5%;
 }
 
 @keyframes wheel-move {
   from {
     transform: rotate(0deg);
-    transform-origin: center center;
-    width: 0%;
   }
 
   to {
     transform: rotate(360deg);
-    transform-origin: -20px 50px;
-    width: 100%;
   }
 }
 
@@ -455,6 +369,71 @@ main {
   }
 }
 
+
+/*-------------------------------------- HOME Page ---------------------------------------*/
+#hero {
+  background-color: #eee6d2;
+  padding: 30px 0;
+  display: inline-block;
+  width: 100%;
+}
+#hero h1 {
+  text-align: center;
+}
+
+#hero p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+
+/*-------------------------------------- ABOUT Page --------------------------------------*/
+.my-profile img {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#container .me h2 {
+  margin: 0 15px;
+  text-align: center;
+  padding: 30px 0px 20px 0px;
+}
+.skills-section {
+  margin: 50px 0 0px 0;
+}
+
+
+/*-------------------------------- mile$ project Page -------------------------------------*/
+
+.intro-row h1 {
+  text-align: center;
+}
+
+.subheader {
+  font-size: 1.2em;
+  font-weight: 500;
+  display: block;
+  margin-top: 50px;
+}
+
+#project-section-1 {
+  padding-bottom: 50px;
+}
+
+#project-section-3 {
+  padding: 0 15px;
+}
+
+#project-section-4 {
+  padding: 0 15px;
+  border-bottom: 1px solid #000000;
+}
+
+
+
 /*-----------------------------footer--------------------------------*/
 #contact h2 {
   text-align: center;
@@ -487,9 +466,9 @@ main {
   font-size: 0.8em;
 }
 
-/* ==============================
+/* =====================================================================
 Medium devices (640px and larger)
-================================= */
+====================================================================== */
 @media only screen and (min-width: 640px) {
   header {
     text-align: unset;
@@ -560,19 +539,17 @@ Medium devices (640px and larger)
     margin-right: auto;
     text-align: center;
   }
+  .button{
+    font-size: unset;
+  }
 }
 
-/* ==============================
+/* =================================================================
 Large devices (1024px or larger)
-================================= */
+================================================================= */
 @media only screen and (min-width: 1024px) {
   body {
-    background-color: #FFFFFF;
-    font-family: 'Heebo', sans-serif;
-    font-size: 21px;
-    font-weight: 300;
-    line-height: 1.6;
-    color: #2a3340;
+    font-size: 21px;3
   }
 
   nav {
