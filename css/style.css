@@ -2,7 +2,8 @@
 * {
   box-sizing: border-box;
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
 
@@ -58,29 +59,30 @@ a:active {
   color: #ba3f39;
   text-decoration: underline;
 }
+
 .container {
   padding: 0 15px;
 }
+
 main {
-  padding-top: 165px;
+  padding-top: 88px;
   width: 100%;
 }
 
 /*-------------------------------- HEADER -------------------------------------*/
 .logo {
-  max-width: 90px;
+  max-width: 70px;
 }
 
 header {
   background-color: #FFFFFF;
   padding: 10px 5px 0px 5px;
   margin: 0px;
-  text-align: center;
   position: fixed;
   width: 100%;
 }
+
 nav {
-  width: 100%;
   padding-top: 0px;
   font-weight: 400;
   text-transform: uppercase;
@@ -89,11 +91,7 @@ nav {
 nav ul {
   list-style-type: none;
   padding: 0;
-}
-
-nav ul li {
-  display: inline-block;
-  padding: 0px 15px 0px 15px;
+  margin: 0;
 }
 
 nav ul li a {
@@ -109,7 +107,6 @@ nav ul li a:visited {
 nav ul li a:hover {
   font-weight: 700;
   color: #ba3f39;
-  border-bottom: 1px solid #ba3f39;
 }
 
 nav ul li a:active {
@@ -118,8 +115,45 @@ nav ul li a:active {
   border-bottom: 1px solid #ba3f39;
 }
 
-/*-------------------------------- LINKS & BUTTONS -------------------------------------*/
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 4px;
+  font-size: 40px;
+  padding-right: 0;
+}
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+  color: #000;
+}
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 10px;
+  background-color: #FFF;
+}
+.navtoggle.responsive li a:hover  {
+  display: block;
+  padding: 10px 10px;
+  background-color: #ba3f39;
+  color: #FFF;
+}
+.navtoggle.responsive li:last-child a:hover  {
+  padding: unset;
+  border-bottom: unset;
+  background-color: unset;
+}
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+  border-bottom: unset;
+}
 
+/*-------------------------------- LINKS & BUTTONS -------------------------------------*/
 .button {
   display: inline-block;
   background-color: #eee6d2;
@@ -131,7 +165,7 @@ nav ul li a:active {
   transition-duration: 0.2s;
   transition-property: opacity;
   font-size: 1.2em;
-  }
+}
 
 .button:hover {
   text-decoration: none;
@@ -163,6 +197,7 @@ nav ul li a:active {
   color: #eee6d2;
   border: 2px solid #ba3f39;
 }
+
 .file-link {
   color: #2a3340;
   text-decoration: underline;
@@ -181,6 +216,7 @@ nav ul li a:active {
   color: #ba3f39;
   text-decoration: underline;
 }
+
 .resume {
   background-color: transparent;
   color: #2a3340;
@@ -205,6 +241,7 @@ nav ul li a:active {
   border: 2px solid #6d0c0f;
   text-decoration: none;
 }
+
 /*------------------------------------- ANIMATIONS -------------------------------------*/
 .statement-role {
   font-weight: 300;
@@ -233,6 +270,7 @@ nav ul li a:active {
     background-color: #ba3f39;
   }
 }
+
 .cls-1 {
   fill: #ba3f39;
 }
@@ -307,7 +345,7 @@ nav ul li a:active {
   animation-duration: 5s;
   animation-name: wheel-move;
   animation-iteration-count: infinite;
-  animation-direction:normal;
+  animation-direction: normal;
   animation-timing-function: linear;
   transform-origin: 28.5% 34.5%;
 }
@@ -369,7 +407,6 @@ nav ul li a:active {
   }
 }
 
-
 /*-------------------------------------- HOME Page ---------------------------------------*/
 #hero {
   background-color: #eee6d2;
@@ -377,6 +414,7 @@ nav ul li a:active {
   display: inline-block;
   width: 100%;
 }
+
 #hero h1 {
   text-align: center;
 }
@@ -401,13 +439,12 @@ nav ul li a:active {
   text-align: center;
   padding: 30px 0px 20px 0px;
 }
+
 .skills-section {
   margin: 50px 0 0px 0;
 }
 
-
 /*-------------------------------- mile$ project Page -------------------------------------*/
-
 .intro-row h1 {
   text-align: center;
 }
@@ -432,14 +469,11 @@ nav ul li a:active {
   border-bottom: 1px solid #000000;
 }
 
-
-
 /*-----------------------------footer--------------------------------*/
 #contact h2 {
   text-align: center;
   padding-top: 20px;
   border-top: 1px solid #000000;
-
 }
 
 #contact p {
@@ -470,17 +504,29 @@ nav ul li a:active {
 Medium devices (640px and larger)
 ====================================================================== */
 @media only screen and (min-width: 640px) {
+  body {
+    font-size: 18px;
+  }
   header {
     text-align: unset;
     padding: 20px 0 13px;
   }
 
+  .logo {
+    max-width: 90px;
+  }
+
   nav {
     width: auto;
     float: right;
-    margin-top: 4px;
+    margin-top: 20px;
+    font-weight: 500;
   }
-
+  nav ul li a:hover {
+    font-weight: 700;
+    color: #ba3f39;
+    border-bottom: 1px solid #ba3f39;
+  }
   main {
     padding-top: 140px;
     width: 100%;
@@ -539,9 +585,34 @@ Medium devices (640px and larger)
     margin-right: auto;
     text-align: center;
   }
-  .button{
+
+  .button {
     font-size: unset;
   }
+  nav ul {
+    margin: 1em 0;
+  }
+
+  nav ul li {
+    display: inline-block;
+    padding: 0px 15px 0px 15px;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child {
+    display: none;
+  }
+  .navtoggle.responsive nav {
+    display: none;
+  }
+  .navtoggle.responsive li  {
+    display: none;
+  }
+
+
 }
 
 /* =================================================================
@@ -549,7 +620,7 @@ Large devices (1024px or larger)
 ================================================================= */
 @media only screen and (min-width: 1024px) {
   body {
-    font-size: 21px;3
+    font-size: 21px;
   }
 
   nav {
