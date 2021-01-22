@@ -2,11 +2,9 @@
 * {
   box-sizing: border-box;
 }
-/*
 html {
   scroll-behavior: smooth;
 }
-*/
 body {
   background-color: #FFFFFF;
   font-family: 'Heebo', sans-serif;
@@ -140,8 +138,7 @@ nav ul li a:active {
 .navtoggle.responsive li a:hover  {
   display: block;
   padding: 10px 10px;
-  background-color: #ba3f39;
-  color: #FFF;
+  color: #ba3f39;
 }
 .navtoggle.responsive li:last-child a:hover  {
   padding: unset;
