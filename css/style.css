@@ -693,7 +693,7 @@ Medium devices (640px and larger)
   }
 
   .add-links-mobile-only .file-link {
-    visibility: visible;
+    visibility: hidden;
   }
 
   nav ul {
