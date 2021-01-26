@@ -1,12 +1,14 @@
-/*-------------------------------- GENERIC -------------------------------------*/
+/* -------------------------------- GENERIC ------------------------------------- */
 * {
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
-  background-color: #FFFFFF;
+  background-color: #fff;
   font-family: 'Heebo', sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -14,20 +16,26 @@ body {
   color: #2a3340;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   line-height: 1.4;
 }
 
 h1 {
-  font-size: 2.2em;
+  font-size: 1.5em;
   font-weight: 700;
+  color: #2a3340;
+  background-color: inherit;
+  text-transform: uppercase;
 }
 
 h2 {
-  font-size: 1.8em;
-  font-weight: 500;
-  font-family: 'Josefin Slab', serif;
+  font-size: 1.5em;
   font-weight: 600;
+  font-family: 'Heebo', sans-serif;
+  letter-spacing: 5px;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -42,20 +50,25 @@ img {
 a {
   color: #2a3340;
   text-decoration: none;
+  background-color: inherit;
 }
 
 a:visited {
   color: #2a3340;
+  background-color: inherit;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: #ba3f39;
   text-decoration: underline;
+  background-color: inherit;
 }
 
 a:active {
   color: #ba3f39;
   text-decoration: underline;
+  background-color: inherit;
 }
 
 .container {
@@ -67,21 +80,34 @@ main {
   width: 100%;
 }
 
-/*-------------------------------- HEADER -------------------------------------*/
+.caption-title {
+  font-weight: 500;
+}
+
+.diagrams {
+  display: none;
+}
+
+.add-links-mobile-only .file-link {
+  display: contents;
+}
+
+/* -------------------------------- HEADER ------------------------------------- */
 .logo {
   max-width: 70px;
 }
 
 header {
-  background-color: #FFFFFF;
-  padding: 10px 5px 0px 5px;
-  margin: 0px;
+  background-color: #fff;
+  padding: 10px 5px 0;
+  margin: 0;
   position: fixed;
   width: 100%;
+  color: inherit;
 }
 
 nav {
-  padding-top: 0px;
+  padding-top: 0;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -94,12 +120,14 @@ nav ul {
 
 nav ul li a {
   color: #2a3340;
+  background-color: inherit;
 }
 
 nav ul li a:visited {
   font-weight: 700;
   color: #2a3340;
   border-bottom: 1px solid #ba3f39;
+  background-color: inherit;
 }
 
 nav ul li a:hover {
@@ -111,14 +139,18 @@ nav ul li a:active {
   font-weight: 700;
   color: #ba3f39;
   border-bottom: 1px solid #ba3f39;
+  background-color: inherit;
 }
 
 .navtoggle li:not(:last-child) {
   display: none;
 }
-.navtoggle, .navtoggle.responsive {
+
+.navtoggle,
+.navtoggle.responsive {
   position: relative;
 }
+
 .navtoggle li .icon {
   position: absolute;
   right: 0;
@@ -126,39 +158,49 @@ nav ul li a:active {
   font-size: 40px;
   padding-right: 0;
 }
+
 .navtoggle.responsive nav {
   padding: 24px 0 0;
   color: #000;
+  background-color: inherit;
 }
-.navtoggle.responsive li  {
+
+.navtoggle.responsive li {
   display: block;
-  padding: 10px 10px;
-  background-color: #FFF;
+  padding: 10px;
+  background-color: #fff;
+  color: inherit;
 }
-.navtoggle.responsive li a:hover  {
+
+.navtoggle.responsive li a:hover {
   display: block;
-  padding: 10px 10px;
+  padding: 10px;
   color: #ba3f39;
+  background-color: inherit;
 }
-.navtoggle.responsive li:last-child a:hover  {
+
+.navtoggle.responsive li:last-child a:hover {
   padding: unset;
-  border-bottom: unset;
+  border-bottom: 0;
   background-color: unset;
+  color: inherit;
 }
-.navtoggle.responsive li:last-child  {
+
+.navtoggle.responsive li:last-child {
   padding: 0 0 10px;
   border-bottom: unset;
 }
 
-/*-------------------------------- LINKS & BUTTONS -------------------------------------*/
+/* -------------------------------- LINKS & BUTTONS ------------------------------------- */
 .button {
   display: inline-block;
   background-color: #eee6d2;
+  color: inherit;
   text-decoration: none;
   font-weight: 400;
-  padding: 0.5em 1em 0.5em 1em;
+  padding: 0.5em 1em;
   border-radius: 10px;
-  margin: 0px 0px 30px 0px;
+  margin: 0 0 30px;
   transition-duration: 0.2s;
   transition-property: opacity;
   font-size: 1.2em;
@@ -186,32 +228,36 @@ nav ul li a:active {
 .button.contact:hover {
   background-color: #ba3f39;
   color: #eee6d2;
-  border: 2px solid #ba3f39;
+  border: 2px solid;
 }
 
 .button.contact:active {
   background-color: #ba3f39;
   color: #eee6d2;
-  border: 2px solid #ba3f39;
+  border: 2px solid;
 }
 
 .file-link {
   color: #2a3340;
   text-decoration: underline;
+  background-color: inherit;
 }
 
 .file-link a:visited {
   color: #2a3340;
+  background-color: inherit;
 }
 
-.file-link a:hover, a:focus {
+.file-link a:hover a:focus {
   color: #ba3f39;
   text-decoration: underline;
+  background-color: inherit;
 }
 
 .file-link a:active {
   color: #ba3f39;
   text-decoration: underline;
+  background-color: inherit;
 }
 
 .resume {
@@ -219,7 +265,7 @@ nav ul li a:active {
   color: #2a3340;
   border: 2px solid #2a3340;
   border-radius: 10px;
-  padding: 0.5em 1em 0.5em 1em;
+  padding: 0.5em 1em;
   font-weight: 400;
   transition: 0.2s opacity;
 }
@@ -227,7 +273,7 @@ nav ul li a:active {
 .resume:hover {
   background-color: #ba3f39;
   color: #eee6d2;
-  border: 2px solid #ba3f39;
+  border: 2px solid;
   text-decoration: none;
   opacity: 0.8;
 }
@@ -235,37 +281,43 @@ nav ul li a:active {
 .resume:active {
   background-color: #6d0c0f;
   color: #eee6d2;
-  border: 2px solid #6d0c0f;
+  border: 2px solid;
   text-decoration: none;
 }
 
-/*------------------------------------- ANIMATIONS -------------------------------------*/
-.statement-role {
-  font-weight: 300;
-  color: #eee6d2;
-  background-color: #ba3f39;
-  padding: 1em 0.5em;
-  display: inline-block;
-  animation-duration: 5s;
-  animation-name: statement-color-change;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-timing-function: linear;
-  margin: 11px 0px;
+.project-list {
+  display: inline;
+  float: left;
+  padding-top: 20px;
 }
 
-@keyframes statement-color-change {
-  0% {
-    background-color: #ba3f39;
-  }
+.next-project {
+  display: inline;
+  float: right;
+  padding-top: 20px;
+}
 
-  50% {
-    background-color: #131f27;
-  }
+/* ------------------------------------- ANIMATIONS ------------------------------------- */
+.statement-role {
+  font-weight: 300;
+  font-size: 0.8em;
+  color: #000;
+  background-color: #fff;
+  padding: 0.2em 0.5em;
+  display: inline-block;
+  margin: auto;
+}
 
-  100% {
-    background-color: #ba3f39;
-  }
+.statement-role a:visited {
+  color: #000;
+  background-color: inherit;
+}
+
+.statement-role a:hover {
+  color: #fff;
+  background-color: #ba3f39;
+  padding: 0.2em 0.5em;
+  text-decoration: none;
 }
 
 .cls-1 {
@@ -276,19 +328,28 @@ nav ul li a:active {
   fill: #4f575b;
 }
 
-.cls-3, .cls-4 {
+.cls-3,
+.cls-4 {
   fill: #498c7f;
 }
 
-.cls-12, .cls-3 {
+.cls-12,
+.cls-3 {
   stroke: #fff;
 }
 
-.cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-3, .cls-6 {
+.cls-10,
+.cls-11,
+.cls-12,
+.cls-13,
+.cls-14,
+.cls-3,
+.cls-6 {
   stroke-miterlimit: 10;
 }
 
-.cls-5, .cls-6 {
+.cls-5,
+.cls-6 {
   fill: #fff;
 }
 
@@ -367,7 +428,7 @@ nav ul li a:active {
 
 @keyframes bird1-move {
   0% {
-    transform: translate(-10, -20px);
+    transform: translate(-10px, -20px);
     opacity: 0;
   }
 
@@ -404,16 +465,24 @@ nav ul li a:active {
   }
 }
 
-/*-------------------------------------- HOME Page ---------------------------------------*/
+/* -------------------------------------- HOME Page --------------------------------------- */
 #hero {
-  background-color: #eee6d2;
-  padding: 30px 0;
+  background-image: url("../img/myself-banner.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px 0;
   display: inline-block;
   width: 100%;
 }
 
 #hero h1 {
   text-align: center;
+  color: #fff;
+  background-color: inherit;
+  text-shadow: 2px 2px #000;
+  font-size: 2.7em;
+  padding-top: 10px;
 }
 
 #hero p {
@@ -423,25 +492,26 @@ nav ul li a:active {
   line-height: 1.2em;
 }
 
-/*-------------------------------------- ABOUT Page --------------------------------------*/
+/* -------------------------------------- ABOUT Page -------------------------------------- */
 .my-profile img {
   text-align: center;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 
 #container .me h2 {
   margin: 0 15px;
   text-align: center;
-  padding: 30px 0px 20px 0px;
+  padding: 30px 0 20px;
 }
 
 .skills-section {
-  margin: 50px 0 0px 0;
+  margin: 50px 0 0;
 }
 
-/*-------------------------------- mile$ project Page -------------------------------------*/
+/* -------------------------------- mile$ project Page ------------------------------------- */
 .intro-row h1 {
   text-align: center;
 }
@@ -450,11 +520,11 @@ nav ul li a:active {
   font-size: 1.2em;
   font-weight: 500;
   display: block;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 #project-section-1 {
-  padding-bottom: 50px;
+  padding-bottom: 10px;
 }
 
 #project-section-3 {
@@ -463,34 +533,45 @@ nav ul li a:active {
 
 #project-section-4 {
   padding: 0 15px;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #000;
 }
 
-/*-----------------------------footer--------------------------------*/
+/* -----------------------------Contact Page-------------------------------- */
+#contact-page h2 {
+  text-align: center;
+  padding-top: 30px;
+}
+
+#contact-page p {
+  text-align: center;
+}
+
+/* -----------------------------footer-------------------------------- */
 #contact h2 {
   text-align: center;
-  padding-top: 20px;
-  border-top: 1px solid #000000;
+  padding-top: 60px;
+  border-top: 1px solid #000;
 }
 
 #contact p {
   text-align: center;
 }
 
-.send-email {
-  text-align: center;
+.direct-contact-links a {
+  text-decoration: underline;
+  font-weight: 500;
 }
 
-.social-media-contact>ul {
+.social-media-contact ul {
   list-style-type: none;
   padding: 0;
   text-align: center;
 }
 
-.social-media-contact>ul>li {
+.social-media-contact ul li {
   display: inline-block;
   max-width: 40px;
-  margin: 15px 5px 5px 5px;
+  margin: 15px 5px 5px;
 }
 
 .copyright-notice {
@@ -504,13 +585,14 @@ Medium devices (640px and larger)
   body {
     font-size: 18px;
   }
+
   header {
     text-align: unset;
-    padding: 20px 0 13px;
+    padding: 10px;
   }
 
   .logo {
-    max-width: 90px;
+    max-width: 80px;
   }
 
   nav {
@@ -519,18 +601,31 @@ Medium devices (640px and larger)
     margin-top: 20px;
     font-weight: 500;
   }
+
   nav ul li a:hover {
     font-weight: 700;
     color: #ba3f39;
-    border-bottom: 1px solid #ba3f39;
+    background-color: inherit;
+    border-bottom: 1px solid;
   }
+
   main {
-    padding-top: 140px;
+    padding-top: 100px;
+    width: 100%;
+  }
+
+  #hero {
+    background-image: url("../img/myself-banner.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px 0;
+    display: inline-block;
     width: 100%;
   }
 
   .my-profile img {
-    width: 50%;
+    width: 100%;
     text-align: center;
     display: block;
     margin-left: auto;
@@ -556,7 +651,8 @@ Medium devices (640px and larger)
     margin-top: 0;
   }
 
-  .skills-section h2, h3 {
+  .skills-section h2,
+  h3 {
     text-align: center;
   }
 
@@ -569,6 +665,11 @@ Medium devices (640px and larger)
   #work h2 {
     display: block;
     text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5em;
+    padding: 30px 0;
   }
 
   #work h3 {
@@ -586,13 +687,22 @@ Medium devices (640px and larger)
   .button {
     font-size: unset;
   }
+
+  .diagrams {
+    display: contents;
+  }
+
+  .add-links-mobile-only .file-link {
+    visibility: visible;
+  }
+
   nav ul {
     margin: 1em 0;
   }
 
   nav ul li {
     display: inline-block;
-    padding: 0px 15px 0px 15px;
+    padding: 0 15px;
   }
 
   .navtoggle li:not(:last-child) {
@@ -602,24 +712,20 @@ Medium devices (640px and larger)
   .navtoggle li:last-child {
     display: none;
   }
+
   .navtoggle.responsive nav {
     display: none;
   }
-  .navtoggle.responsive li  {
+
+  .navtoggle.responsive li {
     display: none;
   }
-
-
 }
 
 /* =================================================================
 Large devices (1024px or larger)
 ================================================================= */
 @media only screen and (min-width: 1024px) {
-  body {
-    font-size: 21px;
-  }
-
   nav {
     font-weight: 500;
   }
@@ -633,7 +739,7 @@ Large devices (1024px or larger)
   }
 
   .my-profile img {
-    width: 50%;
+    width: 100%;
     text-align: center;
     display: block;
     margin-left: auto;
@@ -641,7 +747,7 @@ Large devices (1024px or larger)
   }
 
   .logo {
-    max-width: 110px;
+    max-width: 90px;
   }
 
   #work h2 {
@@ -673,23 +779,32 @@ Large devices (1024px or larger)
   }
 
   #hero {
-    padding: 200px 0;
+    padding: 20px 0;
+    background-image: url("../img/myself-banner.gif");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 100%;
   }
 
   .process-row h2 {
     font-size: 2em;
   }
 
-  .me h2 {
-    font-size: 2em;
+  .container h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    padding: 20px 0;
   }
 
-  .container h2 {
-    font-size: 2em;
+  .add-links-mobile-only .file-link {
+    visibility: hidden;
   }
 }
 
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
-@media only screen and (min-width: 1440px) {}
